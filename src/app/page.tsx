@@ -1,5 +1,4 @@
 import ProductListSec from '@/components/common/ProductListSec';
-import Brands from '@/components/homepage/Brands';
 import DressStyle from '@/components/homepage/DressStyle';
 import Header from '@/components/homepage/Header';
 import Reviews from '@/components/homepage/Reviews';
@@ -401,7 +400,6 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Brands />
       <main className='my-12.5 sm:my-18'>
         <div id="new-arrivals">
           <ProductListSec title='NEW ARRIVALS' data={newArrivalsData} viewAllLink='/shop' />

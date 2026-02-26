@@ -53,18 +53,11 @@ const Header = () => {
           >
             <div className='flex flex-col'>
               <span className='font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2'>
-                <AnimatedCounter from={0} to={200} />+
-              </span>
-              <span className='text-xs xl:text-base text-black/60 text-nowrap'>International Brands</span>
-            </div>
-            <Separator className='ml-6 md:ml-0 h-12 md:h-full bg-black/10' orientation='vertical' />
-            <div className='flex flex-col ml-6 md:ml-0'>
-              <span className='font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2'>
                 <AnimatedCounter from={0} to={2000} />+
               </span>
               <span className='text-xs xl:text-base text-black/60 text-nowrap'>High-Quality Products</span>
             </div>
-            <Separator className='hidden sm:block sm:h-12 md:h-full ml-6 md:ml-0 bg-black/10' orientation='vertical' />
+            <Separator className='h-12 md:h-full ml-6 md:ml-0 bg-black/10' orientation='vertical' />
             <div className='flex flex-col w-full text-center sm:w-auto sm:text-left mt-3 sm:mt-0 sm:ml-6 md:ml-0'>
               <span className='font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2'>
                 <AnimatedCounter from={0} to={3000} />+
@@ -78,15 +71,50 @@ const Header = () => {
           whileInView={{ y: '0', opacity: 1, rotate: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 2.3, duration: 0.8 }}
-          className="relative md:px-4 min-h-[448px] md:min-h-[428px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat bg-[url('/images/header-res-homepage.webp')] md:bg-[url('/images/header-homepage.webp')]"
+          className="relative md:px-4 min-h-112 md:min-h-107 grid grid-cols-2 gap-3 p-4"
         >
+          {/* Top Left - Large Image */}
+          <div className="relative row-span-2 bg-gray-100">
+            <Image
+              src='https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&q=80'
+              fill
+              alt='Fashion clothing collection'
+              className='object-cover rounded-2xl'
+              priority
+              unoptimized
+            />
+          </div>
+          
+          {/* Top Right */}
+          <div className="relative bg-gray-100">
+            <Image
+              src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80'
+              fill
+              alt='Trendy fashion wear'
+              className='object-cover rounded-2xl'
+              unoptimized
+            />
+          </div>
+          
+          {/* Bottom Right */}
+          <div className="relative bg-gray-100">
+            <Image
+              src='https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&q=80'
+              fill
+              alt='Fashion store display'
+              className='object-cover rounded-2xl'
+              unoptimized
+            />
+          </div>
+          
+          {/* Decorative stars */}
           <Image
             priority
             src='/icons/big-star.svg'
             height={104}
             width={104}
             alt='big star'
-            className='absolute right-7 xl:right-0 top-12 max-w-[76px] max-h-[76px] lg:max-w-24 lg:max-h-max-w-24 xl:max-w-[104px] xl:max-h-[104px] animate-[spin_4s_infinite]'
+            className='absolute right-7 xl:right-0 top-12 max-w-19 max-h-19 lg:max-w-24 lg:max-h-24 xl:max-w-26 xl:max-h-26 animate-[spin_4s_infinite] z-10'
           />
           <Image
             priority
@@ -94,7 +122,7 @@ const Header = () => {
             height={56}
             width={56}
             alt='small star'
-            className='absolute left-7 md:left-0 top-36 sm:top-64 md:top-44 lg:top-56 max-w-11 max-h-11 md:max-w-14 md:max-h-14 animate-[spin_3s_infinite]'
+            className='absolute left-7 md:left-0 top-36 sm:top-64 md:top-44 lg:top-56 max-w-11 max-h-11 md:max-w-14 md:max-h-14 animate-[spin_3s_infinite] z-10'
           />
         </motion.section>
       </div>
