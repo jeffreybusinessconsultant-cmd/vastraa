@@ -1,0 +1,7 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Apple touch icon -->
+  <rect width="180" height="180" rx="40" fill="#000000"/>
+  <path d="M45 56L90 135L135 56" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="90" cy="146" r="8" fill="#FFFFFF"/>
+  <line x1="67" y1="67" x2="113" y2="67" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+</svg>
